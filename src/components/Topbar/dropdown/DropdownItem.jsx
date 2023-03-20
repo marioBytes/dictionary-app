@@ -9,11 +9,16 @@ const DropdownItem = ({ cssName, name }) => {
   const handleOnClick = () => {
     setFont(cssName);
     setStorageValue('font', cssName);
-  }
+  };
 
   return (
     <div>
-      <a href="#" className="font-bold" style={{ fontFamily: cssName }} onClick={handleOnClick}>
+      <a
+        href="#"
+        className="font-bold hover:text-purple hover:ease-in-out hover:duration-300 hover:transition-colors ease-in-out duration-300 transition-colors"
+        style={{ fontFamily: cssName }}
+        onClick={handleOnClick}
+      >
         {name}
       </a>
     </div>
