@@ -17,14 +17,13 @@ const DropdownItem = ({ cssName, name }) => {
 
   return (
     <div>
-      <a
-        href="#"
-        className="font-bold block hover:text-purple hover:ease-in-out hover:duration-300 hover:transition-colors ease-in-out duration-300 transition-colors"
+      <button
+        className="font-bold block w-full text-left py-1 hover:text-purple hover:ease-in-out hover:duration-300 hover:transition-colors ease-in-out duration-300 transition-colors"
         style={{ fontFamily: cssName }}
         onClick={handleOnClick}
       >
         {name}
-      </a>
+      </button>
     </div>
   );
 };
