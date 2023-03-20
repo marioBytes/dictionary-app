@@ -1,14 +1,16 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 import DropdownItems from './DropdownItems';
 import IconArrowDown from '../../../assets/IconArrowDown';
 
 import FontContext from '../../../contexts/FontContext';
+import DropdownContext from '../../../contexts/DropdownContext';
+
 import { transformFontName } from '../../../utils/transformFontName';
 
 const Dropdown = () => {
   const { font } = useContext(FontContext);
-  const [isOpen, setIsOpen] = useState(false);
+  const {isOpen, setIsOpen} = useContext(DropdownContext);
 
   return (
     <div className="relative">
