@@ -10,7 +10,7 @@ import { transformFontName } from '../../../utils/transformFontName';
 
 const Dropdown = () => {
   const { font } = useContext(FontContext);
-  const {isOpen, setIsOpen} = useContext(DropdownContext);
+  const { isOpen, setIsOpen } = useContext(DropdownContext);
 
   return (
     <div className="relative">

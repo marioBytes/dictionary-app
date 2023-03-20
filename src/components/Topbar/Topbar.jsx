@@ -15,22 +15,16 @@ const Topbar = () => {
           <Dropdown />
         </DropdownProvider>
         {/* theme switcher */}
-        <div>
-
-        </div>
+        <div></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const DropdownProvider = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <DropdownContext.Provider value={{ isOpen, setIsOpen }}>
-      {children}
-    </DropdownContext.Provider>
-  )
-}
+  return <DropdownContext.Provider value={{ isOpen, setIsOpen }}>{children}</DropdownContext.Provider>;
+};
 
-export default Topbar
+export default Topbar;

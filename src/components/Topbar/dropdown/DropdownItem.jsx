@@ -7,12 +7,12 @@ import DropdownContext from '../../../contexts/DropdownContext';
 
 const DropdownItem = ({ cssName, name }) => {
   const { setFont } = useContext(FontContext);
-  const {setIsOpen} = useContext(DropdownContext);
+  const { setIsOpen } = useContext(DropdownContext);
 
   const handleOnClick = () => {
     setFont(cssName);
     setStorageValue('font', cssName);
-    setIsOpen(false)
+    setIsOpen(false);
   };
 
   return (

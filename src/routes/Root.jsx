@@ -15,18 +15,16 @@ function Root() {
 }
 
 const FontProvider = ({ children }) => {
-  const storedFont = getStorageValue('font')
+  const storedFont = getStorageValue('font');
   const currentFont = storedFont === null ? 'sans-serif' : storedFont;
 
   const [font, setFont] = useState(currentFont);
 
   return (
     <FontContext.Provider value={{ font, setFont }}>
-      <div style={{ fontFamily: font }}>
-        {children}
-      </div>
+      <div style={{ fontFamily: font }}>{children}</div>
     </FontContext.Provider>
-  )
-}
+  );
+};
 
 export default Root;
