@@ -4,7 +4,7 @@ import supportedFonts from '../../../data/supportedFonts';
 
 const DropdownItems = () => {
   const items = supportedFonts.map((font) => (
-    <div key={font.id} className="py-1">
+    <div key={font.id}>
       <DropdownItem cssName={font.cssName} name={font.name} />
     </div>
   ));
