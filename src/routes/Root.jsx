@@ -8,9 +8,11 @@ import '../App.css';
 
 function Root() {
   return (
-    <FontProvider>
-      <Topbar />
-    </FontProvider>
+    <div className="p-6 w-full md:p-10 lg:px-0 lg:py-9 lg:max-w-3xl lg:m-auto">
+      <FontProvider>
+        <Topbar />
+      </FontProvider>
+    </div>
   );
 }
 
