@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Logo from '../../assets/Logo';
 import Dropdown from './dropdown/Dropdown';
+import DropdownContext from '../../contexts/DropdownContext';
 
 const Topbar = () => {
   return (
@@ -10,13 +11,25 @@ const Topbar = () => {
       <Logo />
       <div>
         {/* dropdown to change font */}
-        <Dropdown />
+        <DropdownProvider>
+          <Dropdown />
+        </DropdownProvider>
         {/* theme switcher */}
         <div>
 
         </div>
       </div>
     </div>
+  )
+}
+
+const DropdownProvider = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <DropdownContext.Provider value={{ isOpen, setIsOpen }}>
+      {children}
+    </DropdownContext.Provider>
   )
 }
 
