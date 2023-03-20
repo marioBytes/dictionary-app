@@ -1,16 +1,16 @@
 import React from 'react';
 
+import Logo from '../../assets/Logo';
+import Dropdown from './dropdown/Dropdown';
+
 const Topbar = () => {
   return (
-    <div>
-      <div>
-        {/* logo */}
-      </div>
+    <div className="flex justify-between items-center">
+      {/* logo */}
+      <Logo />
       <div>
         {/* dropdown to change font */}
-        <div>
-
-        </div>
+        <Dropdown />
         {/* theme switcher */}
         <div>
 
