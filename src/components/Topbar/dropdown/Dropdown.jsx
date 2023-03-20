@@ -13,13 +13,15 @@ const Dropdown = () => {
   const { isOpen, setIsOpen } = useContext(DropdownContext);
 
   return (
-    <div className="relative">
-      <div>
-        <button className="font-bold flex items-center gap-3" onClick={() => setIsOpen(!isOpen)}>
-          {transformFontName(font)} <IconArrowDown />
-        </button>
+    <div className="flex items-center">
+      <div className="relative">
+        <div>
+          <button className="font-bold flex items-center gap-3" onClick={() => setIsOpen(!isOpen)}>
+            {transformFontName(font)} <IconArrowDown />
+          </button>
+        </div>
+        {isOpen && <DropdownItems />}
       </div>
-      {isOpen && <DropdownItems />}
     </div>
   );
 };
