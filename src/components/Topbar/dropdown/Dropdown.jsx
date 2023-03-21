@@ -13,10 +13,10 @@ const Dropdown = () => {
   const { isOpen, setIsOpen } = useContext(DropdownContext);
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center hover:cursor-pointer">
       <div className="relative">
         <div>
-          <button className="font-bold flex items-center gap-3" onClick={() => setIsOpen(!isOpen)}>
+          <button className="font-bold flex items-center gap-3 text-base md:text-lg" onClick={() => setIsOpen(!isOpen)}>
             {transformFontName(font)} <IconArrowDown />
           </button>
         </div>

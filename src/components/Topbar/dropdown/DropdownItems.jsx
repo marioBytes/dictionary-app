@@ -10,7 +10,7 @@ const DropdownItems = () => {
   ));
 
   return (
-    <div style={{ background: 'var(--white)' }} className="rounded-2xl absolute text-left p-6 w-36 right-3 mt-3">
+    <div className="bg-white rounded-2xl absolute text-base md:text-lg text-left p-6 w-36 right-3 mt-3 dark:bg-gray dark:drop-shadow-dropdown">
       {items}
     </div>
   );
