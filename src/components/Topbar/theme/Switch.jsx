@@ -42,9 +42,29 @@ const Switch = () => {
     document.documentElement.classList.remove(remove);
   };
 
+  const styles = {
+    switchContainer: {
+      width: '40px',
+      height: '20px',
+      borderRadius: '50px',
+    },
+    switch: {
+      width: '14px',
+      height: '14px',
+      borderRadius: '100%',
+      top: '3px',
+      left: '4px',
+      transform: theme === 'dark' ? 'translateX(18px)' : 'translateX(0)',
+    },
+  };
+
   return (
-    <div>
-      <button onClick={switchTheme}>switch</button>
+    <div
+      style={styles.switchContainer}
+      className="bg-even-lighter-gray text-even-lighter-gray dark:bg-purple dark:text-purple relative"
+      onClick={switchTheme}
+    >
+      <div style={styles.switch} className="bg-white absolute transition-all ease-in-out" />
     </div>
   );
 };

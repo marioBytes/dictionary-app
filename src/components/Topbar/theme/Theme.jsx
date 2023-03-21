@@ -5,9 +5,9 @@ import IconMoon from '../../../assets/IconMoon';
 
 const Theme = () => {
   return (
-    <div className="flex items-center">
+    <div className="flex gap-2 items-center">
       <Switch />
-      <IconMoon />
+      <IconMoon className="stroke-lighter-gray dark:stroke-purple" />
     </div>
   );
 };
