@@ -1,0 +1,9 @@
+<button
+  class="flex p-4 border-2 border-white focus:border-opacity-20 focus:border-gray dark:border-black dark:focus:border-white dark:focus:border-opacity-15"
+  (click)="themeSet($event)"
+>
+  <span class="material-icons text-gray" *ngIf="!getDarkMode()">dark_mode</span>
+  <span class="material-icons text-purple" *ngIf="getDarkMode()"
+    >light_mode</span
+  >
+</button>

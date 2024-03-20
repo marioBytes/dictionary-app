@@ -1,2 +1,8 @@
-<h1 class="text-3xl font-bold underline">Hello World!</h1>
+<div class="min-h-screen min-w-full bg-white dark:bg-black">
+  <h1 class="text-3xl font-bold underline dark:text-white">Hello World!</h1>
+  <app-theme-switch
+    (onClick)="darkMode.set(!darkMode())"
+    darkMode="{{ darkMode() }}"
+  ></app-theme-switch>
+</div>
 <router-outlet />
